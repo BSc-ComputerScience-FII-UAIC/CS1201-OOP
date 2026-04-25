@@ -1,0 +1,137 @@
+format 221
+
+classcanvas 128056 class_ref 134584 // Expression
+  classdiagramsettings member_max_width 0 end
+  xyzwh 421 28 2000 97 59
+end
+classcanvas 128184 class_ref 134712 // MultExpression
+  classdiagramsettings member_max_width 0 end
+  xyz 212 162 2000
+end
+classcanvas 128440 class_ref 141240 // ArithExpression
+  classdiagramsettings member_max_width 0 end
+  xyz 339 161 2005
+end
+classcanvas 128952 class_ref 141368 // PrimaryExpression
+  classdiagramsettings member_max_width 0 end
+  xyz 61 161 2000
+end
+classcanvas 129080 class_ref 141496 // BoolExpression
+  classdiagramsettings member_max_width 0 end
+  xyz 720 162 2000
+end
+classcanvas 129208 class_ref 141624 // RelExpression
+  classdiagramsettings member_max_width 0 end
+  xyz 464 160 2000
+end
+classcanvas 129336 class_ref 141752 // AndExpression
+  classdiagramsettings member_max_width 0 end
+  xyz 591 160 2000
+end
+classcanvas 134456 class_ref 141880 // IntConstant
+  classdiagramsettings member_max_width 0 end
+  xyz 6 241 2000
+end
+classcanvas 134584 class_ref 142008 // BoolConstant
+  classdiagramsettings member_max_width 0 end
+  xyz 155 240 2000
+end
+classcanvas 134712 class_ref 142136 // VarName
+  classdiagramsettings member_max_width 0 end
+  xyz 85 240 2000
+end
+relationcanvas 128312 relation_ref 134584 // <generalisation>
+  decenter_end 226
+  from ref 128184 z 2001 to point 250 132
+  line 130232 z 2001 to point 439 132
+  line 130360 z 2001 to ref 128056
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 129592 relation_ref 141368 // <generalisation>
+  decenter_begin 516
+  decenter_end 402
+  from ref 128440 z 2006 to point 381 143
+  line 131128 z 2006 to point 454 143
+  line 130872 z 2006 to ref 128056
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 129720 relation_ref 141496 // <generalisation>
+  decenter_begin 505
+  decenter_end 567
+  from ref 129208 z 2001 to point 502 142
+  line 131896 z 2001 to point 471 141
+  line 131384 z 2001 to ref 128056
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 129848 relation_ref 141624 // <generalisation>
+  decenter_end 721
+  from ref 129336 z 2001 to point 627 131
+  line 132152 z 2001 to point 488 129
+  line 132024 z 2001 to ref 128056
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 133048 relation_ref 141880 // <generalisation>
+  decenter_end 92
+  from ref 128952 z 2001 to point 109 118
+  line 133176 z 2001 to point 425 116
+  line 133304 z 2001 to ref 128056
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 133688 relation_ref 142264 // <directional aggregation>
+  from ref 129208 z 2006 to ref 128440
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 133816 relation_ref 142392 // <directional aggregation>
+  from ref 129336 z 2001 to ref 129208
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 133944 relation_ref 142520 // <directional aggregation>
+  from ref 129080 z 2001 to ref 129336
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 134200 relation_ref 142648 // <directional aggregation>
+  from ref 128440 z 2006 to ref 128184
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 134328 relation_ref 142776 // <directional aggregation>
+  from ref 128184 z 2001 to ref 128952
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 134840 relation_ref 142904 // <generalisation>
+  decenter_begin 611
+  decenter_end 233
+  from ref 134456 z 2001 to ref 128952
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 134968 relation_ref 143032 // <generalisation>
+  from ref 134712 z 2001 to ref 128952
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 135096 relation_ref 143160 // <generalisation>
+  decenter_begin 389
+  decenter_end 747
+  from ref 134584 z 2001 to ref 128952
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 135352 relation_ref 143288 // <generalisation>
+  decenter_end 865
+  from ref 129080 z 2001 to point 759 119
+  line 135480 z 2001 to point 502 116
+  line 135608 z 2001 to ref 128056
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+end

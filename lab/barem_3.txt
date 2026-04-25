@@ -1,0 +1,15 @@
+Completati codul din "subiect_3.cpp" si implementati clasele "Car" si "Dealer" astfel incat pe ecran sa fie afisate rezultatele cerute.
+
+5p   - codul compileaza
+5p   - codul afiseaza rezultatele cerute
+7.5p - clasa Car
+2.5p - constructor clasa Dealer
+     - lista de masini nu va fi redimensionata ulterior apelarii constructorului
+15p  - operatorul += din clasa Dealer
+     - va arunca o exceptie de tipul std::runtime_error daca dealerul este plina
+15p  - functie PrintOffers din clasa Dealer    
+10p  - completarea codului din main
+
+OBS:
+    - std:runtime_error poate fi folosit dupa ce puneti "#include <stdexcept>"
+    - arhiva urcata sa aiba numele "GRUPA_NUME_PRENUME.zip" (exemplu: "A4_Ionita_Norbert.zip") 

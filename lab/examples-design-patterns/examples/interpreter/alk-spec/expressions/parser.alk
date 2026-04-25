@@ -1,0 +1,232 @@
+/*
+
+  PrimaryExpression ::=
+        IntConstant
+      | BoolConstant
+      | VarName
+      | "(" Expression ")"   
+
+
+  IntConstant ::=
+        Digit+
+
+  Digit ::=
+       "0" | "1" | ... | "9"
+
+  VarName ::=
+       "a" | "b" | ... | "z"
+
+  MultiplicativeExpression ::=
+         PrimaryExpression (("*" | "/" | "%") PrimaryExpression)*
+
+  ArithExpression ::=
+         MultiplicativeExpression (("+" | "-") MultiplicativeExpression
+
+  Expression ::= ArithExpression
+*/
+
+
+// the current position in the input
+index = 0;
+
+/*
+   try to look ahead for the next k symbols
+   index remains unchanged
+   returns null if it fails 
+*/
+lookAhead(k) modifies index, input {
+  if (index + k <= input.size()) {
+    str = "";
+    for (i = 0; i < k; ++i)
+      str = str + input.at(index + i);
+    return str;
+  }
+  else return "\0";
+}
+
+// skip the white-spaces
+skipWS() modifies index, input {
+      // skip the spaces
+    while (index < input.size() &&
+           (input.at(index) == " "  ||
+	    input.at(index) == "\t" ||  // not working
+	    input.at(index) == "\n"))   // not working
+      index++;
+}
+
+// moves the index to the next k-th symbol,
+nextSym(k) modifies index, input {
+  if (index + k <= input.size())
+    index += k;
+  else
+    error("nextsym(): expected a symbol");
+}
+
+// prints an error message
+error(msg) modifies index {
+  print(msg + " at position ");
+  print(index);
+  print("");
+}
+
+/*
+  tests if the current symbol is accepted and
+  if yes, advances in the input, skipping the white-spaced
+*/
+accept(str) {
+    if (lookAhead(str.size()) == str) {
+        nextSym(str.size());
+	      skipWS();
+        return true;
+    }
+    return false;
+}
+
+
+// test if the current symbol is the exptected one
+expect(str) {
+    skipWS();
+    if (accept(str))
+        return true;
+    error("expect: unexpected symbol");
+    return false;
+}
+
+/*
+  try to parse a variable name and to returm its AST;
+  for now, a variable name is a smal capital letter
+*/
+varName() {
+  skipWS();
+  s = lookAhead(1);
+  if ("a" <= s && s <= "z") {
+    nextSym(1);
+    skipWS();
+    return [s, <>];
+  }
+  else return [];
+}
+
+/*
+  convert a digit symbol into the corresponding int
+*/
+digit2int(s) {
+  digits = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+  if ("0" <= s && s <= "9")
+    for (i = 0; i < 10; ++i)
+      if (s == digits[i]) return i;
+}
+  
+/*
+  test if the current symbol is a digit
+*/
+acceptDigit() modifies index, input {
+  digits = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+  if (index < input.size()) {
+    for (i = 0; i < 10; ++i) 
+      if (accept(digits[i])) {
+        return true;
+      }
+  }
+  return false;
+}
+
+/*
+  try to parse a int expression and to return its AST
+*/
+intConstant() {
+  skipWS();
+  s = lookAhead(1);
+  if (acceptDigit()) {
+    const = digit2int(s);
+    s = lookAhead(1);
+    while (acceptDigit()) {
+      const = const * 10 + digit2int(s);
+      s = lookAhead(1);
+    }
+    skipWS();
+    return [const, <>];
+  }
+  else return [];
+}
+
+
+/*
+  try to parse a PrimaryExpression and to return its AST
+*/
+primaryExpression() {
+    ast = intConstant();
+    if (ast != []) return ast;
+    ast = varName();
+    if (ast != []) return ast;
+    if (accept("(")) {
+        ast = expression();
+        expect(")");
+    }
+    return ast;
+}
+
+
+/*
+  try to parse a MultiplicativeExpression and to return its AST
+*/
+multiplicativeExpression() {
+    ast = primaryExpression();
+    list = < ast >;
+    tag = <>;
+    s = lookAhead(1);
+    while (accept("*") || accept("/") || accept("%")) {
+        ast1 = primaryExpression();
+        list.pushBack(ast1);
+        tag.pushBack(s);
+	      skipWS();
+        s = lookAhead(1);
+    }
+    if (list.size() > 1)
+      return [tag, list];
+    else
+      return list.at(0);
+}
+
+/*
+  try to parse an ArithExpression and to return its AST
+*/
+arithExpression() {
+    ast = multiplicativeExpression();
+    list = < ast >;
+    tag = <>;
+    s = lookAhead(1);
+    while (accept("+") || accept("-")) {
+        ast1 = multiplicativeExpression();
+        list.pushBack(ast1);
+        tag.pushBack(s);
+	      skipWS();
+        s = lookAhead(1);
+    }
+    if (list.size() > 1)
+      return [tag, list];
+    else
+      return list.at(0);
+}
+
+/*
+  try to parse a Expression  and to return its AST
+*/
+expression() {
+    ast = arithExpression();
+    if (ast != []) return ast;
+}
+
+// the expression
+input = "a * b / c + a + 5 - b  && true ";
+index = 0;
+print(expression());
+
+input = "a + b - 2 ";
+index = 0;
+print(expression());
+
+
+input = "a + (2) ";
+index = 0;
+print(expression());

@@ -1,0 +1,1 @@
+I bought an apple. Then I eat an apple....... ,,,,, !!!! ?????     APPle is my favorite.

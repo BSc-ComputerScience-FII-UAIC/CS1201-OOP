@@ -1,0 +1,22 @@
+//#include <iostream>
+//
+//float operator "" _Kelvin(const char* x)
+//{
+//	float value = strtof(x, nullptr);
+//	return value - 273.15;
+//}
+//
+//float operator "" _Fahrenheit(const char* x)
+//{
+//	float value = strtof(x, nullptr);
+//	return (value - 32) / 1.8;
+//}
+//
+//int main()
+//{
+//	float a = 300_Kelvin;
+//	float c = 25.5_Kelvin;
+//	float b = 120_Fahrenheit;
+//	std::cout << a << ' ' << b << ' ' << c;
+//	return 0;
+//}

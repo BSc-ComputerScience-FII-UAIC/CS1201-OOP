@@ -1,0 +1,13 @@
+#include "../expressions/parser.alk"
+/*
+
+  AssignStmt ::=
+  	VarName "=" Expression ";"
+
+  SeqStmt ::=
+        Stmt *
+
+  Stmt ::= AssignStmt
+*/
+
+

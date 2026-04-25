@@ -1,0 +1,14 @@
+window_sizes 1350 722 337 1007 606 64
+cleanlooks_style
+diagrams
+  active  classdiagram_ref 128184 // hierarchy
+    841 574 100 A4 0 0
+end
+show_stereotypes
+selected classdiagram_ref 128184 // hierarchy
+open
+  class_ref 134584 // Expression
+  class_ref 134712 // MultExpression
+  class_ref 141240 // A
+end
+end

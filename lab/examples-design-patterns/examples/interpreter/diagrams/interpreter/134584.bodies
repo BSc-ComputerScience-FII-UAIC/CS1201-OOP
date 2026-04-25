@@ -1,0 +1,3 @@
+class Expression
+!!!134584.cpp!!!	getLabel()
+return label;

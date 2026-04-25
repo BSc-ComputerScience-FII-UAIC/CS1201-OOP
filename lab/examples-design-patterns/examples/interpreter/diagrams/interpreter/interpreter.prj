@@ -1,0 +1,981 @@
+format 221
+"interpreter"
+  revision 3
+  modified_by 56 "dlucanu"
+
+
+  
+  // class settings
+  default_attribute_visibility private default_relation_visibility private default_operation_visibility public
+  
+  classdiagramsettings draw_all_relations yes hide_attributes no hide_operations no hide_getset_operations no hide_ports no show_members_full_definition no show_members_visibility no show_members_stereotype no show_members_context no show_members_multiplicity no show_members_initialization no show_attribute_modifiers no member_max_width 127 show_parameter_dir yes show_parameter_name yes package_name_in_tab no class_drawing_mode natural drawing_language uml show_context_mode no auto_label_position yes show_relation_modifiers no show_relation_visibility no show_infonote no shadow yes gradient none show_stereotype_properties no end
+  
+  classcompositediagramsettings auto_label_position yes draw_all_relations yes shadow yes gradient none end
+  
+  usecasediagramsettings package_name_in_tab no show_context_mode no auto_label_position yes draw_all_relations yes class_drawing_mode actor shadow yes gradient none show_stereotype_properties no end
+  
+  sequencediagramsettings show_full_operations_definition no show_class_of_operation no write_horizontally yes instances_drawing_mode natural drawing_language uml draw_all_relations yes shadow yes gradient none show_stereotype_properties no show_class_context_mode no show_msg_context_mode no end
+  
+  collaborationdiagramsettings show_full_operations_definition no show_class_of_operation no show_hierarchical_rank no write_horizontally yes instances_drawing_mode natural drawing_language uml package_name_in_tab no show_class_pack_context_mode no show_msg_context_mode no draw_all_relations yes shadow yes gradient none show_stereotype_properties no end
+  
+  objectdiagramsettings write_horizontally yes package_name_in_tab no show_class_pack_context_mode no auto_label_position yes draw_all_relations yes shadow yes gradient none show_stereotype_properties no end
+  
+  objectcompositediagramsettings auto_label_position yes draw_all_relations yes shadow yes gradient none end
+  
+  componentdiagramsettings package_name_in_tab no show_context_mode no auto_label_position yes draw_all_relations yes shadow yes gradient none
+   draw_component_as_icon no show_component_req_prov no show_component_rea no show_stereotype_properties no end
+  
+  deploymentdiagramsettings package_name_in_tab no show_context_mode no write_horizontally yes auto_label_position yes draw_all_relations yes shadow yes gradient none
+   draw_component_as_icon no show_component_req_prov no show_component_rea no show_stereotype_properties no end
+  
+  statediagramsettings package_name_in_tab no show_context_mode no auto_label_position yes write_label_horizontally yes show_trans_definition no draw_all_relations yes shadow yes gradient none
+   show_activities yes region_horizontally yes drawing_language uml show_stereotype_properties no end
+  
+  activitydiagramsettings package_name_in_tab no show_context_mode no show_opaque_action_definition no auto_label_position yes write_label_horizontally no draw_all_relations yes shadow yes gradient none
+   show_infonote yes drawing_language uml show_stereotype_properties no end
+  
+  class_color yellow duration_color transparent continuation_color gray note_color blue fragment_color transparent subject_color transparent usecase_color yellow package_color transparent component_color green artifact_color green deploymentnode_color gray state_color yellow stateaction_color transparent activity_color transparent activityregion_color transparent activitypartition_color transparent activityaction_color transparent parameterpin_color white generalization_color black 
+  dpi 72
+  font_size 10
+  diagram_format A4
+
+  image_root_dir ""
+
+
+  mark_for_import
+  
+  classview 128312 "Expresii"
+    
+    classdiagramsettings member_max_width 0 end
+    
+    classcompositediagramsettings end
+    
+    collaborationdiagramsettings end
+    
+    objectdiagramsettings end
+    
+    objectcompositediagramsettings end
+    
+    sequencediagramsettings end
+    
+    statediagramsettings
+     end
+    
+    
+    activitydiagramsettings
+     end
+    classdiagram 128184 "firstAttempt"
+      classdiagramsettings draw_all_relations no member_max_width 0 end
+      size A4
+    end
+
+    class 134584 "Expression"
+      visibility package 
+      cpp_decl "${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      attribute 134584 "label"
+	public explicit_type "list<string>"
+	stereotype "list"
+	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      operation 134584 "getLabel"
+	cpp_virtual cpp_noexcept public explicit_return_type ""
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 142520 "accept"
+	public explicit_return_type ""
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+    end
+
+    class 134712 "MultExpression"
+      visibility package 
+      cpp_decl "${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 134584 // <generalisation>
+	relation 134584 ---|>
+	  a public
+	    cpp default "${type}"
+	    java "${type}"
+	    classrelation_ref 134584 // <generalisation>
+	  b parent class_ref 134584 // Expression
+      end
+
+      classrelation 142776 // <directional aggregation>
+	relation 142776 o-->
+	  a role_name "" private
+	    cpp default "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} * ${name}${value};
+"
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 142776 // <directional aggregation>
+	  b parent class_ref 141368 // PrimaryExpression
+      end
+
+      classrelation 143672 // <generalisation>
+	relation 143672 ---|>
+	  a public
+	    cpp default "${type}"
+	    java "${type}"
+	    classrelation_ref 143672 // <generalisation>
+	  b parent class_ref 142264 // CompoundExpression
+      end
+
+      operation 143288 "accept"
+	public explicit_return_type ""
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+    end
+
+    class 141240 "ArithExpression"
+      visibility package 
+      cpp_decl "${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 141368 // <generalisation>
+	relation 141368 ---|>
+	  a public
+	    cpp default "${type}"
+	    java "${type}"
+	    classrelation_ref 141368 // <generalisation>
+	  b parent class_ref 134584 // Expression
+      end
+
+      classrelation 142648 // <directional aggregation>
+	relation 142648 o-->
+	  a role_name "" private
+	    cpp default "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} * ${name}${value};
+"
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 142648 // <directional aggregation>
+	  b parent class_ref 134712 // MultExpression
+      end
+
+      classrelation 143800 // <generalisation>
+	relation 143800 ---|>
+	  a public
+	    cpp default "${type}"
+	    java "${type}"
+	    classrelation_ref 143800 // <generalisation>
+	  b parent class_ref 142264 // CompoundExpression
+      end
+
+      operation 143416 "accept"
+	public explicit_return_type ""
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+    end
+
+    class 141368 "PrimaryExpression"
+      visibility package 
+      cpp_decl "${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 141880 // <generalisation>
+	relation 141880 ---|>
+	  a public
+	    cpp default "${type}"
+	    java "${type}"
+	    classrelation_ref 141880 // <generalisation>
+	  b parent class_ref 134584 // Expression
+      end
+
+      classrelation 144312 // <generalisation>
+	relation 144312 ---|>
+	  a public
+	    cpp default "${type}"
+	    java "${type}"
+	    classrelation_ref 144312 // <generalisation>
+	  b parent class_ref 142264 // CompoundExpression
+      end
+
+      operation 143160 "accept"
+	public explicit_return_type ""
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+    end
+
+    class 141496 "BoolExpression"
+      visibility package 
+      cpp_decl "${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 142520 // <directional aggregation>
+	relation 142520 o-->
+	  a role_name "" private
+	    cpp default "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} * ${name}${value};
+"
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 142520 // <directional aggregation>
+	  b parent class_ref 141752 // AndExpression
+      end
+
+      classrelation 143288 // <generalisation>
+	relation 143288 ---|>
+	  a public
+	    cpp default "${type}"
+	    java "${type}"
+	    classrelation_ref 143288 // <generalisation>
+	  b parent class_ref 134584 // Expression
+      end
+    end
+
+    class 141624 "RelExpression"
+      visibility package 
+      cpp_decl "${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 141496 // <generalisation>
+	relation 141496 ---|>
+	  a public
+	    cpp default "${type}"
+	    java "${type}"
+	    classrelation_ref 141496 // <generalisation>
+	  b parent class_ref 134584 // Expression
+      end
+
+      classrelation 142264 // <directional aggregation>
+	relation 142264 o-->
+	  a role_name "" private
+	    cpp default "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} * ${name}${value};
+"
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 142264 // <directional aggregation>
+	  b parent class_ref 141240 // ArithExpression
+      end
+
+      classrelation 143928 // <generalisation>
+	relation 143928 ---|>
+	  a public
+	    cpp default "${type}"
+	    java "${type}"
+	    classrelation_ref 143928 // <generalisation>
+	  b parent class_ref 142264 // CompoundExpression
+      end
+
+      operation 143544 "accept"
+	public explicit_return_type ""
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+    end
+
+    class 141752 "AndExpression"
+      visibility package 
+      cpp_decl "${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 141624 // <generalisation>
+	relation 141624 ---|>
+	  a public
+	    cpp default "${type}"
+	    java "${type}"
+	    classrelation_ref 141624 // <generalisation>
+	  b parent class_ref 134584 // Expression
+      end
+
+      classrelation 142392 // <directional aggregation>
+	relation 142392 o-->
+	  a role_name "" private
+	    cpp default "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} * ${name}${value};
+"
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 142392 // <directional aggregation>
+	  b parent class_ref 141624 // RelExpression
+      end
+
+      classrelation 144056 // <generalisation>
+	relation 144056 ---|>
+	  a public
+	    cpp default "${type}"
+	    java "${type}"
+	    classrelation_ref 144056 // <generalisation>
+	  b parent class_ref 142264 // CompoundExpression
+      end
+
+      operation 143672 "accept"
+	public explicit_return_type ""
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+    end
+
+    class 141880 "IntConstant"
+      visibility package 
+      cpp_decl "${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 142904 // <generalisation>
+	relation 142904 ---|>
+	  a public
+	    cpp default "${type}"
+	    java "${type}"
+	    classrelation_ref 142904 // <generalisation>
+	  b parent class_ref 141368 // PrimaryExpression
+      end
+
+      classrelation 144696 // <generalisation>
+	relation 144696 ---|>
+	  a public
+	    cpp default "${type}"
+	    java "${type}"
+	    classrelation_ref 144696 // <generalisation>
+	  b parent class_ref 134584 // Expression
+      end
+
+      operation 142776 "accept"
+	public explicit_return_type ""
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+    end
+
+    class 142008 "BoolConstant"
+      visibility package 
+      cpp_decl "${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 143160 // <generalisation>
+	relation 143160 ---|>
+	  a public
+	    cpp default "${type}"
+	    java "${type}"
+	    classrelation_ref 143160 // <generalisation>
+	  b parent class_ref 141368 // PrimaryExpression
+      end
+
+      classrelation 144184 // <generalisation>
+	relation 144184 ---|>
+	  a public
+	    cpp default "${type}"
+	    java "${type}"
+	    classrelation_ref 144184 // <generalisation>
+	  b parent class_ref 142264 // CompoundExpression
+      end
+
+      classrelation 144568 // <generalisation>
+	relation 144568 ---|>
+	  a public
+	    cpp default "${type}"
+	    java "${type}"
+	    classrelation_ref 144568 // <generalisation>
+	  b parent class_ref 134584 // Expression
+      end
+
+      operation 142648 "accept"
+	public explicit_return_type ""
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+    end
+
+    class 142136 "VarName"
+      visibility package 
+      cpp_decl "${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 143032 // <generalisation>
+	relation 143032 ---|>
+	  a public
+	    cpp default "${type}"
+	    java "${type}"
+	    classrelation_ref 143032 // <generalisation>
+	  b parent class_ref 141368 // PrimaryExpression
+      end
+
+      classrelation 144440 // <generalisation>
+	relation 144440 ---|>
+	  a public
+	    cpp default "${type}"
+	    java "${type}"
+	    classrelation_ref 144440 // <generalisation>
+	  b parent class_ref 134584 // Expression
+      end
+
+      operation 142904 "accept"
+	public explicit_return_type ""
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+    end
+
+    classdiagram 134712 "compositeSol"
+      classdiagramsettings draw_all_relations no member_max_width 0 end
+      size A4
+    end
+
+    class 142264 "CompoundExpression"
+      visibility package 
+      cpp_decl "${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 143416 // <generalisation>
+	relation 143416 ---|>
+	  a public
+	    cpp default "${type}"
+	    java "${type}"
+	    classrelation_ref 143416 // <generalisation>
+	  b parent class_ref 134584 // Expression
+      end
+
+      classrelation 143544 // children (<directional aggregation>)
+	relation 143544 o-->
+	  a role_name "children" multiplicity "1..*" private
+	    cpp default "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${stereotype}<${type} *> ${name}${value};
+"
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${stereotype}<${type}> ${name}${value};
+"
+	    classrelation_ref 143544 // children (<directional aggregation>)
+	  b parent class_ref 134584 // Expression
+      end
+
+      operation 143032 "accept"
+	public explicit_return_type ""
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+    end
+
+    classdiagram 134968 "compositeWithAccept"
+      classdiagramsettings draw_all_relations no member_max_width 0 end
+      size A4
+    end
+  end
+
+  classview 134840 "Vistor"
+    
+    classdiagramsettings member_max_width 0 end
+    
+    classcompositediagramsettings end
+    
+    collaborationdiagramsettings end
+    
+    objectdiagramsettings end
+    
+    objectcompositediagramsettings end
+    
+    sequencediagramsettings end
+    
+    statediagramsettings
+     end
+    
+    
+    activitydiagramsettings
+     end
+    classdiagram 134840 "VistorExpression"
+      classdiagramsettings member_max_width 0 end
+      size A4
+    end
+
+    class 142392 "VistorExpression"
+      visibility package 
+      cpp_decl "${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      operation 141112 "visitExpression"
+	public explicit_return_type ""
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 141240 "visitIntConstant"
+	public explicit_return_type ""
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 141368 "visitBoolConstant"
+	public explicit_return_type ""
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 141496 "visitVarName"
+	public explicit_return_type ""
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 141624 "visitCompundExpression"
+	public explicit_return_type ""
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 141752 "visitPrimaryExpression"
+	public explicit_return_type ""
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 141880 "visitMultExpression"
+	public explicit_return_type ""
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 142008 "visitArithExpression"
+	public explicit_return_type ""
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 142136 "visitRelExpression"
+	public explicit_return_type ""
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 142264 "visitAndExpression"
+	public explicit_return_type ""
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 142392 "visitBoolExpression"
+	public explicit_return_type ""
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+    end
+
+    class 142520 "VisitorPrettyPrint"
+      visibility package 
+      cpp_decl "${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 144824 // <generalisation>
+	relation 144824 ---|>
+	  a public
+	    cpp default "${type}"
+	    java "${type}"
+	    classrelation_ref 144824 // <generalisation>
+	  b parent class_ref 142392 // VistorExpression
+      end
+    end
+
+    class 142648 "VistorEval"
+      visibility package 
+      cpp_decl "${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 144952 // <generalisation>
+	relation 144952 ---|>
+	  a public
+	    cpp default "${type}"
+	    java "${type}"
+	    classrelation_ref 144952 // <generalisation>
+	  b parent class_ref 142392 // VistorExpression
+      end
+
+      classrelation 145080 // state (<unidirectional association>)
+	relation 145080 --->
+	  a role_name "state" private
+	    cpp default "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} * ${name}${value};
+"
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 145080 // state (<unidirectional association>)
+	  b parent class_ref 142776 // State
+      end
+    end
+
+    class 142776 "State"
+      visibility package 
+      cpp_decl "${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+    end
+  end
+end
